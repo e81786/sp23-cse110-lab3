@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+/* Applying to everything */
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* This the general body changes I want for my page */
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: #b2ebc1;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+/* Changes to the Header */
+
+header {
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.5%;
+  padding-right: 3%;
+  padding-left: 3%;
+  padding-bottom: 0.3%;
+}
+
+h1 {
+  margin: 0 0 0 0;
+}
+
+#dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 8vh;
+}
+
+#dropdown button {
+  background-color: #408251;
+  color: white;
+  padding: 1ch;
+  border: none;
+  border-radius: 20%;
+  cursor: pointer;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 12px 16px;
+  display: block;
+}
+
+nav {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+nav a:hover {
+  background-color: #f1f1f1;
+}
+
+#dropdown:hover nav {
+  display: block;
+  right: 0%;
+}
+
+#dropdown:hover button {
+  background-color: #285434;
+}
+
+/* CSS for the main section */
+
+main {
+  padding: 0vw 6vw 1vw 6vw;
+}
+
+h3 {
+  margin: 0;
+}
+
+.real a {
+  color: hsl(263, 71%, 72%);
+}
+
+.attend,
+#checkin,
+#recap,
+#brainstorm,
+#comments {
+  font-display: auto;
+}
+
+.attend {
+  grid-area: left;
+}
+
+#checkin {
+  grid-area: right;
+  padding-left: 1in;
+  padding-bottom: 10px;
+}
+
+#checkin details {
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+details[open] {
+  margin: auto;
+}
+
+.side {
+  display: grid;
+  grid-template-areas: "left right";
+  grid-auto-flow: row;
+  border-style: dotted;
+  border-color: #4d4d4d;
+  border-width: 5px;
+  border-radius: 5%;
+  padding: 1pt 5pt 1pt 5pt;
+}
+
+#recap > a {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+  font-style: oblique;
+  font-size: 1.1em;
+}
+
+#comments {
+  margin: 2px 2px 2px 2px;
+}
+
+.line {
+  margin-bottom: 2%;
+}
+
+/* Picture section */
+
+#pics {
+  border: 5mm ridge rgba(238, 248, 61, 0.6);
+  padding-left: 3mm;
+  padding-right: 3mm;
+  padding-bottom: 3mm;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#appear {
+  margin-left: 37%;
+  margin-right: 37%;
+  text-align: center;
+  font-size: 30px;
+}
+
+#appear:hover {
+  cursor: pointer;
+}
+
+#appear:active {
+  text-shadow: 3px 4px 7px rgba(81, 67, 21, 0.8);
+  animation-duration: 2s;
+}
+
+#brainstorm p ~ p {
+  font-weight: bolder;
+  text-align: center;
+}
+
+.pictures.three {
+  display: none;
+}
+
+#appear:active + .pictures.three {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.one {
+  flex-shrink: 4;
+}
+
+.two {
+  flex-shrink: 2;
+}
+
+.three {
+  flex-shrink: 2;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.pictures.three + img {
+  margin: auto;
+  display: block;
+  position: relative;
+}
+
+.sanic {
+  width: 200px;
+  height: 234px;
+}
+
+/* footer */
+
+hr + p {
+  text-align: center;
+}
+
+hr + p a {
+  text-decoration: none;
+  color: black;
+}

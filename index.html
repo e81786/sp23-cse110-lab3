@@ -3,66 +3,74 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>Meeting Minutes</title>
   <link rel="icon" href="media/house.png">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <meta name="author" content="Eric Dong" />
   <meta name="description" content="Sample Meeting Notes" />
 </head>
 
 <body>
   <header>
-    <nav>
-      <ul>
-        <li> <a href="fakelast.html">Last Week's Minutes</a></li>
-        <li><a href="index.html">This Page</a></li>
-        <li><a href="fakenext.html">Fake Next Meeting</a></li>
-        <li><a href="fakecontact.html">Fake Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Sample First Meeting Minutes!</h1>
+    <div id="dropdown">
+      <button>
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <nav>
+        <a href="fakelast.html">Last Week's Minutes</a>
+        <a href="index.html">This Page</a>
+        <a href="fakenext.html">Fake Next Meeting</a>
+        <a href="fakecontact.html">Fake Contact</a>
+      </nav>
   </header>
   <main>
-    <h1>Sample First Meeting Minutes!</h1>
     <h3><em>Date: April 12th, 2023</em></h3>
-    <h2>Attendance</h2>
-    <div class="attend">
-      <ul id="list">
-        <li>Eric Dong</li>
-        <li>A Friendly Face</li>
-      </ul>
-    </div>
     <section>
       <h2>Agenda</h2>
       <div class="real">
         <ol>
           <li><em>A fresh start</em></li>
           <li>We know exactly what we're doing</li>
-          <li><a href="#recap">Recap</a> last week's imaginary meeting that definetly happened</li>
           <li>Time to <a href="#checkin">check in</a>!</li>
+          <li><a href="#recap">Recap</a> last week's imaginary meeting that definetly happened</li>
           <li><strong>Let's <a href="#brainstorm">Brainstorm</a>!</strong></li>
-          <li><a href="#comments">Anthing else</a> anyone wants to comment on</li>
+          <li><a href="#comments">Anything else</a> anyone wants to comment on</li>
         </ol>
       </div>
     </section>
+    <div class="side">
+      <div class="attend">
+        <h2>Attendance List</h2>
+        <ul id="list">
+          <li>Eric Dong</li>
+          <li>A Friendly Face</li>
+        </ul>
+      </div>
+      <section id="checkin">
+        <h2>Check Ins</h2>
+        <details>
+          <summary><b>Eric Dong's Check</b></summary>
+          <p>Eric Dong is the example of a perfect teammate, doing all the work in the group. In fact, he might be
+            the only one in the group because no one really knows who A Friendly Face could be, but you could
+            look at the options for new friends at the bottom of the meeting notees with our meeting notes form!
+          </p>
+        </details>
+        <details>
+          <summary><b>A Friendly Face's Check</b></summary>
+          <p>Sodium, atomic number 11, was first isolated by Humphry Davy in 1807. A chemical component of salt,
+            he named it Na in honor of the saltiest region on earth, North America.</p>
+        </details>
+      </section>
+    </div>
     <section id="recap">
       <h2>Last Meeting Recap</h2>
       <p><span>Surprisingly</span>, last week's meeting didn't happen at all! That's super <i>disappointing</i>
-        and I want you guys to work harder than that.</p><a href="fakelast.html">Check out last week's fake
+        and I want you guys to work harder than that.</p><a href="fakelast.html">Check out last week's
+        fake
         meeting!</a>
-    </section>
-    <section id="checkin">
-      <h2>Check Ins</h2>
-      <details>
-        <summary><b>Eric Dong's Check</b></summary>
-        <p>Eric Dong is the example of a perfect teammate, doing all the work in the group. In fact, he might be
-          the only one in the group because no one really knows who A Friendly Face could be, but you could
-          look at the options for new friends at the bottom of the meeting notees with our meeting notes form!
-        </p>
-      </details>
-      <details>
-        <summary><b>A Friendly Face's Check</b></summary>
-        <p>Sodium, atomic number 11, was first isolated by Humphry Davy in 1807. A chemical component of salt,
-          he named it Na in honor of the saltiest region on earth, North America.</p>
-      </details>
     </section>
     <section id="brainstorm">
       <h2>Brainstorming</h2>
@@ -75,16 +83,19 @@
     </section>
     <section id="comments">
       <h2>Additional Comments</h2>
-      <p>Nothing in here - just like my brain</p>
+      <p>Nothing in here - just like my brain.</p>
     </section> <br />
-    <hr />
-    <section>
-      <h2>Pictures</h2>
-      <picture> <img src="media/mess.png" alt="HELP" class="pics" /> </picture>
-      <picture> <img src="media/think.png" alt="Thinking" class="pics" /> </picture>
-      <picture> <img src="media/whiteboard.png" alt="This is it" class="pics" /> </picture>
+    <hr class="line" />
+    <section id="pics">
+      <h2 id="appear"> Pictures</h2>
+      <div class="pictures three">
+        <picture class="one"> <img src="media/mess.png" alt="HELP" class="pics" /> </picture>
+        <picture class="two"> <img src="media/think.png" alt="Thinking" class="pics" /> </picture>
+        <picture class="three"> <img src="media/whiteboard.png" alt="This is it" class="pics" /> </picture>
+      </div>
+      <img src="media/sonic.jpeg" alt="sanic" class="sanic">
     </section>
-    <section>
+    <!-- <section>
       <h2>Video/Audio Recording</h2>
       <figure>
         <figcaption>Meeting Recording:</figcaption> <video controls width="250">
@@ -93,8 +104,8 @@
         <p>Audio Download:</p><audio controls src="media/arecord.mp3"> <a href="media/arecord.mp3"> Download
             audio </a> </audio>
       </figure>
-    </section>
-    <section>
+    </section> -->
+    <!-- <section>
       <h3>Form</h3>
       <form>
         <fieldset>
@@ -121,11 +132,11 @@
           </select> <br /> <button>Submit</button>
         </fieldset>
       </form>
-    </section>
+    </section> -->
   </main>
   <footer>
     <hr />
-    <p><i>Sample Meeting Notes</i></p>
+    <p><a href="#dropdown"><i>Sample Meeting Notes</i></a></p>
   </footer>
 </body>
 
